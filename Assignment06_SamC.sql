@@ -351,11 +351,10 @@ Go
 -- 2017-02-01	    Robert King
 -- 2017-03-01	    Anne Dodsworth
 
-----------STUCK ON #5------------
 Go
 CREATE VIEW v --EmployeeInvDate
 AS
-  SELECT TOP 1000000
+  SELECT DESTINCT TOP 1000000
     I.InventoryDate,
     [EmployeeName] = E.EmployeeFirstName + ' ' + E.EmployeeLastName
   FROM Inventories as I
@@ -370,7 +369,7 @@ SELECT * FROM Inventories;
 SELECT * FROM Employees;
 SELECT * FROM vEmployeeInvDate;
 Go
-----------STUCK ON #5------------
+
 
 
 -- Question 6 (10% pts): How can you create a view show a list of Categories, Products, 
@@ -422,10 +421,10 @@ Go
 -- Beverages	  Chai	              2017-01-01	  39	  Steven Buchanan
 -- Beverages	  Chang	              2017-01-01	  17	  Steven Buchanan
 -- Beverages	  Chartreuse verte	  2017-01-01	  69	  Steven Buchanan
--- Beverages	  CÙte de Blaye	      2017-01-01	  17	  Steven Buchanan
--- Beverages	  Guaran· Fant·stica	2017-01-01	  20	  Steven Buchanan
+-- Beverages	  C√¥te de Blaye	      2017-01-01	  17	  Steven Buchanan
+-- Beverages	  Guaran√° Fant√°stica	2017-01-01	  20	  Steven Buchanan
 -- Beverages	  Ipoh Coffee	        2017-01-01	  17	  Steven Buchanan
--- Beverages	  Lakkalikˆˆri	      2017-01-01	  57	  Steven Buchanan
+-- Beverages	  Lakkalik√∂√∂ri	      2017-01-01	  57	  Steven Buchanan
 
 CREATE VIEW vCatProdInvDateInvCountEmp
 AS
@@ -552,9 +551,9 @@ Go
 -- 1	          Beverages	    2	        Chang	              19.00	    2	          2017-01-01	  17	  5	          Steven Buchanan
 -- 1	          Beverages	    2	        Chang	              19.00	    79	        2017-02-01	  27	  7	          Robert King
 -- 1	          Beverages	    2	        Chang	              19.00	    156	        2017-03-01	  37	  9	          Anne Dodsworth
--- 1	          Beverages	    24	      Guaran· Fant·stica	4.50	    24	        2017-01-01	  20	  5	          Steven Buchanan
--- 1	          Beverages	    24	      Guaran· Fant·stica	4.50	    101	        2017-02-01	  30	  7	          Robert King
--- 1	          Beverages	    24	      Guaran· Fant·stica	4.50	    178	        2017-03-01	  40	  9	          Anne Dodsworth
+-- 1	          Beverages	    24	      Guaran√° Fant√°stica	4.50	    24	        2017-01-01	  20	  5	          Steven Buchanan
+-- 1	          Beverages	    24	      Guaran√° Fant√°stica	4.50	    101	        2017-02-01	  30	  7	          Robert King
+-- 1	          Beverages	    24	      Guaran√° Fant√°stica	4.50	    178	        2017-03-01	  40	  9	          Anne Dodsworth
 -- 1	          Beverages	    34	      Sasquatch Ale	      14.00	    34	        2017-01-01	  111	  5	          Steven Buchanan
 -- 1	          Beverages	    34	      Sasquatch Ale	      14.00	    111	        2017-02-01	  121	  7	          Robert King
 -- 1	          Beverages	    34	      Sasquatch Ale	      14.00	    188	        2017-03-01	  131	  9	          Anne Dodsworth
